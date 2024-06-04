@@ -24,7 +24,11 @@ form.addEventListener('submit', async e => {
     }
 
     newForm.set('tf_img', JSON.stringify(obj));
-    console.log(newForm.get('tf_img'));
+    if(!newForm.get('name_1'))
+    {
+        newForm.set('name_1', '-');
+        newForm.set('contact_1', '-');
+    }
 
     fetch(url, { method: 'POST', body: newForm } )
     .then(response => console.log('bisa'))
