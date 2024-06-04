@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>algo++</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="algo-reg-form" id="algo-reg-form">
+        <input type="text" required class="name-input-1" placeholder="Nama" name="name" />
+        <br>
+        <input type="text" required class="name-input-1" placeholder="Line" name="contact" />
+        <br>
+        <select class="plan-input" onclick="select()" name="options">
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+        </select>
+        <script src="scripts/selector.js"></script>
+        <br>
+        <div class="second-person" id="second-person">
+            <input type="text" class="name-input-2" placeholder="Nama" name="name_1" />
+            <br>
+            <input type="text" class="name-input-2" placeholder="Line" name="contact_1" />
+            <br>
+        </div>
+        <input type="file" accept="image/*" class="img-input" name="tf_img" />
+        <br>
+        <button type="submit">Submit!</button>
+    </form>
+    <script src="scripts/form.js"></script>
+</body>
+</html>
