@@ -310,6 +310,7 @@ body
     padding: 10px 40px;
     border-radius: 10px;
     border-bottom: #1f8181 solid 3px;
+    font-size: 1rem;
 }
 
 .second-person 
@@ -429,6 +430,7 @@ body
         z-index: 2;
         margin: 0;
         width: 12rem;
+        animation: 0.3s ease-in-out;
     }
     
     .intro .header .nav a
@@ -567,6 +569,12 @@ body
     {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .img-input-label
+    {
+        width: 15vh;
     }
 
     .img-input p
