@@ -8,32 +8,90 @@
 </head>
 <body>
     <div class="intro">
-        <h1 class="intro-title">algo++</h1>
-        <p class="intro-desc">Let's learn with us!</p>
-    </div>
-
-
-    <form name="algo-reg-form" id="algo-reg-form">
-        <input type="text" required class="name-input-1" placeholder="Nama" name="name" />
-        <br>
-        <input type="text" required class="name-input-1" placeholder="Line" name="contact" />
-        <br>
-        <select class="plan-input" onclick="select()" name="options">
-            <option value="single">Single</option>
-            <option value="double">Double</option>
-        </select>
-        <script src="scripts/selector.js"></script>
-        <br>
-        <div class="second-person" id="second-person">
-            <input type="text" class="name-input-2" placeholder="Nama" name="name_1" />
-            <br>
-            <input type="text" class="name-input-2" placeholder="Line" name="contact_1" />
-            <br>
+        <header class="header" id="header">
+            <a href="#" id="logo" class="intro-logo">algo++</h1>
+            <nav class="nav">
+                <a class="active" id="home-pos" href="#home">Home</a>
+                <a id="reason-pos" href="#reason">Introduction</a>
+                <a id="trainer-pos" href="#trainer">Our Trainer</a>
+                <a id="reg-pos" href="#registration">Registration</a>
+            </nav>
+        </header>
+        <div class="intro-content" id="home">
+            <h1 class="intro-title">Let's learn with us!</h1>
+            <div class="intro-desc">
+                <p class="intro-desc-text">Download the course outline</p>
+                <a class="intro-co" href="#">here</a>
+            </div>
         </div>
-        <input type="file" accept="image/*" class="img-input" name="tf_img" />
-        <br>
-        <button type="submit" id="submit-button">Submit!</button>
-    </form>
-    <script src="scripts/form.js"></script>
+    </div>
+    <div class="reason" id="reason">
+        <div class="reason-content">
+            <h2 class="reason-title">Why algo++?</h2>
+            <p class="reason-text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, minus accusamus recusandae laborum labore suscipit. Quae sequi cupiditate facere, consectetur consequuntur delectus accusamus dolores vitae quam exercitationem aperiam fugiat?</p>
+        </div>
+    </div>
+    <div class="trainer" id="trainer">
+        <div class="trainer-content">
+            <h2 class="trainer-title">Meet our trainer</h2>
+            <div class="trainer-tag-container">
+                <div class="trainer-pos">
+                    <img class="trainer-image" src="assets/images/le_sserafim_kim_chaewon_profile_7.jpg">
+                    <p class="trainer-name">Kim Chae Won</p>
+                </div>
+                <div class="trainer-pos">
+                    <img class="trainer-image" src="assets/images/le_sserafim_kim_chaewon_profile_7.jpg">
+                    <p class="trainer-name">Kim Chae Won</p>
+                </div>
+                <div class="trainer-pos">
+                    <img class="trainer-image" src="assets/images/le_sserafim_kim_chaewon_profile_7.jpg">
+                    <p class="trainer-name">Kim Chae Won</p>
+                </div>
+                <div class="trainer-pos">
+                    <img class="trainer-image" src="assets/images/le_sserafim_kim_chaewon_profile_7.jpg">
+                    <p class="trainer-name">Kim Chae Won</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="registration" id="registration">
+        <div class="registration-content">
+            <h2 class="registration-title">Register now!</h2>
+            <div class="alert none" id="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>Submitted!</strong> your registration has been submitted
+            </div>
+            <form name="algo-reg-form" id="algo-reg-form">
+                <input type="text" required class="input-1" placeholder="Nama" name="name" />
+                <br>
+                <input type="text" required class="input-1" placeholder="Line" name="contact" />
+                <br>
+                <div class="bundling">
+                    <p>Bundling:</p>
+                    <select class="plan-input" id="plan-input" name="options">
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                    </select>
+                </div>
+                <script src="scripts/selector.js"></script>
+                <br>
+                <div class="second-person" id="second-person">
+                    <input type="text" class="input-1" placeholder="Nama" name="name_1" />
+                    <br>
+                    <input type="text" class="input-1" placeholder="Line" name="contact_1" />
+                    <br>
+                </div>
+                <div class="img-input">
+                    <p>Transaction receipt:</p>
+                    <input type="file" accept="image/*" class="img-input-button" name="tf_img" />
+                </div>
+                <br>
+                <button type="submit" class="submit-button" id="submit-button">Submit!</button>
+                <div class="loader" id="loader"></div> 
+            </form>
+            <script src="scripts/form.js"></script>
+        </div>
+    </div>
+    <script src="scripts/nav.js"></script>
 </body>
 </html>

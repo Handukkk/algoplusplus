@@ -1,6 +1,9 @@
 const url = 'https://script.google.com/macros/s/AKfycbzexsVtIEbu6FheZBwvCZ9vuC9XMRJgUWCQrXGaQ_FUtdZ3LQzC_vNlRCY6J_We_tMc/exec';
 const form = document.forms['algo-reg-form'];
-var btn = document.getElementById('submit-button');
+const btn = document.getElementById('submit-button');
+const loader = document.getElementById('loader');
+const second = document.getElementById('second-person');
+const alrt = document.getElementById('alert')
 
 async function convertToBase64(file) {
     return new Promise((resolve, reject) => {
@@ -31,11 +34,17 @@ form.addEventListener('submit', async e => {
         newForm.set('contact_1', '-');
     }
 
-    btn.style.display = 'none';
+    btn.style.zIndex = -999999;
+    btn.style.opacity = 0;
+    loader.style.display = 'inline';
     fetch(url, { method: 'POST', body: newForm } )
     .then(response =>{
-        btn.style.display = 'block';
+        loader.style.display = 'none';
+        btn.style.zIndex = 0;
+        btn.style.opacity = 1;
+        second.style.display = 'none'
         form.reset();
+        alrt.classList.remove('none');
     })
     .catch(error => console.log('error'));
 });

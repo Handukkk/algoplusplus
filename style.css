@@ -1,8 +1,329 @@
-body {
-    margin: 0;
-    padding: 0;
+@font-face 
+{
+    font-family: 'shuttle';
+    src: url('assets/fonts/SHUTTLE-X.ttf');
 }
 
-.second-person {
+body 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.intro 
+{
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, rgba(0, 26, 41, 0.65), rgba(42, 0, 61, 0.65)), url(assets/images/code.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+}
+
+.intro-content
+{
+    margin-top: 25%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.intro .intro-content .intro-title 
+{
+    margin: 0;
+    padding-bottom: 15px;
+    position: relative;
+    color: white;
+    font-size: 50px;
+}
+
+.intro .header 
+{
+    position: fixed;
+    width: 100%;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro .header .intro-logo
+{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: shuttle;
+    margin-left: 1%;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.intro .header .intro-logo:hover
+{
+    transform: scale(1.1);
+}
+
+.intro .header .nav 
+{
+    margin-right: 50px;
+}
+
+.intro .header .nav a
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.intro .header .nav a:hover
+{
+    border-bottom: #20b7b7 solid 3px;
+}
+
+.intro .header .nav .active
+{
+    color: #20b7b7;
+    border-bottom: #20b7b7 solid 3px;
+}
+
+.intro .header .nav a:hover
+{
+    box-shadow: 1px;
+}
+
+.intro .intro-content .intro-desc 
+{
+    padding-top: 15px;
+    position: relative;
+    display: inline;
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro .intro-content .intro-desc .intro-desc-text
+{
+    display: inline;
+}
+
+.intro .intro-content .intro-desc .intro-co
+{
+    display: inline;
+    text-decoration: underline;
+    color: #20b7b7;
+}
+
+.reason 
+{
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background-image: linear-gradient(45deg, rgba(0, 26, 41, 0.65), rgba(42, 0, 61, 0.65));
+}
+
+.reason .reason-content
+{
+    padding: 1rem 10vh;
+    margin-top: 25vh;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+}
+
+.reason .reason-content .reason-title
+{
+    font-size: 50px;
+}
+
+.reason .reason-content .reason-text
+{
+    font-size: 30px;
+}
+
+.trainer
+{
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background-image: linear-gradient(-45deg, rgba(42, 0, 61, 0.65), rgba(0, 26, 41, 0.65));
+}
+
+.trainer .trainer-content
+{
+    padding: 1rem 10vh;
+    margin-top: 15vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    text-align: center;
+}
+
+.trainer .trainer-content .trainer-title
+{
+    font-size: 50px;
+    margin-bottom: 1vh;
+}
+
+.trainer .trainer-content .trainer-tag-container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.trainer .trainer-content .trainer-tag-container .trainer-pos
+{
+    padding: 5vh;
+}
+
+.trainer .trainer-content .trainer-tag-container img
+{
+    width: 25vh;
+    border-radius: 25%;
+}
+
+.registration
+{
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background-image: linear-gradient(45deg, rgba(0, 26, 41, 0.65), rgba(42, 0, 61, 0.65));
+    color: white;
+}
+
+.registration .registration-content
+{
+    padding: 1rem 10vh;
+    margin-top: 15vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    text-align: center;
+}
+
+.registration .registration-content .registration-title
+{
+    font-size: 50px;
+}
+
+.registration .registration-content .input-1
+{
+    padding: 1vh;
+    margin-bottom: 3vh;
+    width: 45vh;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: #20b7b7 solid 3px;
+    color: white;
+}
+
+.registration .registration-content .bundling .plan-input
+{
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    width: 15vh;
+    height: 5vh;
+    background-color: #20b7b7;
+    border-radius: 25px;
+}
+
+.registration .registration-content .bundling p
+{
+    display: inline;
+    padding: 5px;
+}
+
+.registration .registration-content .img-input p
+{
+    display: inline;
+    padding: 5px;
+}
+
+.registration .registration-content .submit-button
+{
+    display: inline;
+    background-color: #20b7b7;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 25px;
+}
+
+.second-person 
+{
     display: none;
 }
+
+.loader {
+    display: none;
+    position: absolute;
+    left: 49%;
+    width: 25px;
+    padding: 3px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #20b7b7;
+    --_m: 
+      conic-gradient(#0000 10%,#000),
+      linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {to{transform: rotate(1turn)}}
+
+.none
+{
+    display: none;
+}
+  
+/* The alert message box */
+.alert {
+    padding: 15px;
+    width: 60vh;
+    background-color: #04AA6D;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
+
+
