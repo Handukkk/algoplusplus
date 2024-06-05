@@ -4,6 +4,11 @@
     src: url('assets/fonts/SHUTTLE-X.ttf');
 }
 
+*
+{
+    box-sizing: border-box;
+}
+
 body 
 {
     margin: 0;
@@ -27,6 +32,8 @@ body
 
 .intro-content
 {
+    position: relative;
+    z-index: 0;
     margin-top: 25%;
     margin-left: 10%;
     text-align: left;
@@ -53,6 +60,7 @@ body
     backdrop-filter: blur(10px);
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 .intro .header .intro-logo
@@ -182,6 +190,7 @@ body
 {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .trainer .trainer-content .trainer-tag-container .trainer-pos
@@ -192,7 +201,7 @@ body
 .trainer .trainer-content .trainer-tag-container img
 {
     width: 25vh;
-    border-radius: 25%;
+    border-radius: 10px;
 }
 
 .registration
@@ -241,13 +250,48 @@ body
     width: 15vh;
     height: 5vh;
     background-color: #20b7b7;
-    border-radius: 25px;
+    border-radius: 10px;
+    border-bottom: #1f8181 solid 3px;
 }
 
 .registration .registration-content .bundling p
 {
     display: inline;
     padding: 5px;
+}
+
+.registration .registration-content .img-input
+{
+    margin: 10px;
+}
+
+.registration .registration-content .img-input .img-input-button
+{
+    display: none;
+}
+
+.registration .registration-content .img-input .img-input-label
+{
+    background-color: #20b7b7;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-bottom: #1f8181 solid 3px;
+    cursor: pointer;
+}
+
+.img-input-label:hover
+{
+    background-color: #1f8181 !important;
+}
+
+.submit-button:hover
+{
+    background-color: #1f8181 !important;
+}
+
+.plan-input:hover
+{
+    background-color: #1f8181 !important;
 }
 
 .registration .registration-content .img-input p
@@ -264,7 +308,8 @@ body
     outline: none;
     color: white;
     padding: 10px 40px;
-    border-radius: 25px;
+    border-radius: 10px;
+    border-bottom: #1f8181 solid 3px;
 }
 
 .second-person 
@@ -307,10 +352,10 @@ body
     margin-bottom: 30px;
     margin-left: 50%;
     transform: translate(-50%);
-  }
+}
   
-  /* The close button */
-  .closebtn {
+/* The close button */
+.closebtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;
@@ -319,11 +364,228 @@ body
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
-  }
-  
-  /* When moving the mouse over the close button */
-  .closebtn:hover {
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover 
+{
     color: black;
-  }
+}
 
+.berger
+{
+    display: none;
+}
 
+.invc
+{
+    display: none;
+}
+
+@media(max-width: 660px)
+{
+    .intro .header 
+    {
+        position: fixed;
+        width: 100%;
+        padding: 15px;
+        top: 0;
+        left: 0;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+    }
+    
+    .intro .header .intro-logo
+    {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: shuttle;
+        margin-left: 1%;
+        font-size: 30px;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .intro .header .intro-logo:hover
+    {
+        transform: scale(1.1);
+    }
+    
+    .intro .header .nav 
+    {
+        position: fixed;
+        top: 0;
+        right: 100%;
+        flex-direction: column;
+        margin-right: 50px;
+        background-color: rgba(0, 0, 0, 1);
+        height: 100vh;
+        width: 60%;
+        z-index: 2;
+        margin: 0;
+        width: 12rem;
+    }
+    
+    .intro .header .nav a
+    {
+        display: block;
+        margin: 0;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        margin-left: 20px;
+    }
+
+    .berger
+    {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .intro .header .nav a:hover
+    {
+        border-bottom: #20b7b7 solid 3px;
+    }
+    
+    .intro .header .nav .active
+    {
+        color: #20b7b7;
+        border-bottom: #20b7b7 solid 3px;
+    }
+    
+    .intro .header .nav a:hover
+    {
+        box-shadow: 1px;
+    }
+
+    .intro
+    {
+        display: flex;
+        position: relative;
+        z-index: 0;
+    }
+
+    .intro-content
+    {
+        position: relative;
+        text-align: center;
+        display: block;
+        width: fit-content;
+        margin: 0;
+        padding: 0 2rem;
+        margin-top: 25vh;
+    }
+
+    .intro-title
+    {
+        position: relative;
+        z-index: 0;
+    }
+    
+    .invc
+    {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .registration .registration-content .input-1
+    {
+        padding: 1vh;
+        margin-bottom: 3vh;
+        width: 100%;
+        background: none;
+        outline: none;
+        border: none;
+        border-bottom: #20b7b7 solid 3px;
+        color: white;
+    }
+
+    .alert {
+        padding: 15px;
+        width: 40vh;
+        background-color: #04AA6D;
+        color: white;
+        margin-top: 0;
+        margin-bottom: 30px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        border-radius: 10px;
+    }
+      
+    /* The close button */
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    /* When moving the mouse over the close button */
+    .closebtn:hover 
+    {
+        color: black;
+    }
+
+    .bundling
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .plan-input
+    {
+        margin: 0;
+    }
+
+    .bundling p
+    {
+        margin : 3px;
+    }
+
+    .img-input
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-input p
+    {
+        margin: 10px;
+    }
+
+    .reason-content
+    {
+        margin-top: 4vh !important;
+    }
+
+    .trainer-content
+    {
+        margin-top: 4vh !important;
+    }
+
+    .registration-content
+    {
+        margin-top: 4vh !important;
+    }
+}

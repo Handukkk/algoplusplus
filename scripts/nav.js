@@ -51,3 +51,15 @@ document.getElementById('reg-pos').addEventListener('click', function(e) {
     document.getElementById('reg-pos').classList.add('active');
     active = 'reg-pos';
 });
+
+document.getElementById('berger').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('nav').style.right = 0;
+    document.getElementById('invc').style.display = 'block';
+});
+
+document.getElementById('invc').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('nav').style.right = '100%';
+    document.getElementById('invc').style.display = 'none';
+});
